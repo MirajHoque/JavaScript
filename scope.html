@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Scope</title>
+	<script type="text/javascript">
+		//global scope
+		var myglobal=5; //global 
+		function test()
+		{
+			oppsGlobal=10; //no var so it is global
+		}
+		function SecondTest()
+		{
+			output="";
+			if(typeof myglobal!=undefined)
+			{
+				output=myglobal+myglobal;
+
+			}
+			if(typeof oppsGlobal!=undefined)
+			{
+				output=oppsGlobal+oppsGlobal;
+			}
+			console.log(output);
+		}
+		test();
+		SecondTest();
+
+		//local scope
+
+		function myLocalScope()
+		{
+			var value=-17;
+			console.log(value);
+		}
+		myLocalScope();
+
+		//global and local scope wihtin functin
+
+		var outWear="T-Shirt";
+
+		function favouriteOutfit()
+		{
+			var outWear="Polo T-Shirt";
+			return outWear;
+		}
+
+		//favouriteOutfit();
+		console.log(favouriteOutfit());
+		console.log(outWear);
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

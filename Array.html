@@ -1,0 +1,43 @@
+<html>
+<title>Array</title>
+<head> 
+<script type="text/javascript">
+var array=["Mita","Miraj","Mila"];
+console.log(array);
+//console.log("</br>");
+//console.log(" number of elements in array:"+array.length);
+//console.log("<br>");
+ 
+var condensedArray=new Array("Mridula","Rodela","Fariha");
+console.log(condensedArray);
+//console.log("<br>");
+//console.log("number of elements in condensedarray:"+condensedArray.length);
+/*var reuse=["Mridula","Rodela","Fariha"];
+var data=reuse[1];
+console.log(data);
+reuse[0]="Eti";
+console.log(reuse);
+*/
+var arrayOfArray=[["Mridula",28],["Rodela",26],["Fariha",20]]; //it is a multidimensional array
+ //let looks for rodela
+ var info=arrayOfArray[1][0];
+ console.log(info);
+ //push elements into array
+ arrayOfArray.push(["Eti",48]);
+ console.log(arrayOfArray);
+ //pop elements from array
+ var removeLastElements=arrayOfArray.pop();// pop remove elements from the last
+ console.log(removeLastElements);
+ var removeFirstElements=arrayOfArray.shift();
+ console.log(removeFirstElements);
+ var something=[1,2,[4,5]]; //it is an arrays of array
+ var addElementsFirst=something.unshift([2,0]);
+ console.log(something);
+
+
+
+</script>
+</head>
+<body>
+</body>
+</html>
