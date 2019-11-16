@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>json</title>
+</head>
+<body>
+<script type="text/javascript">
+	
+var mycat=
+{
+	name:"meow",
+	legs:2,
+	friends:[],
+	12:"Birthdate"
+};
+var nameValue=mycat.name;
+console.log(nameValue);
+var friendsName=mycat['friends'];
+console.log(friendsName);
+var playNumber=12;
+var date=mycat[playNumber];
+console.log(date);
+
+//update object properties
+
+var dog=
+{
+	name:"coder",
+	legs:4,
+	friends:["Miraj","Someone"]
+};
+
+dog.name="coffe Coder"
+var updateName=dog.name;
+console.log(updateName);
+
+
+//add propoerties
+dog.bark= "gehuuu!";
+console.log(dog.bark);
+
+//delete properties
+var recent=delete dog.friends;
+console.log(dog);
+
+//check object properties
+function checkObj(checkProp)
+{
+	if(dog.hasOwnProperty(checkProp)) //hasOwnProoperty is boolean
+	{
+		return dog[checkProp];
+	}
+	else
+	{
+		return "not found";
+	}
+
+}
+console.log(checkObj("hello"));
+console.log(checkObj("name"));
+
+</script>
+</body>
+</html>
