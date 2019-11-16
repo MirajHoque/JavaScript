@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>object collection </title>
+</head>
+<body>
+<script type="text/javascript">
+	
+	var collection=
+	{
+		"2548":
+		{
+			"album":"slippery when wet",
+			"artist":"Bon Jovi",
+			"tracks":["Let it rock","You give love a bad name"]
+		},
+		"2468":
+		{
+			"album":"1999",
+			"artist":"Prince",
+			"tracks":["1999","Little red corvette"]
+		},
+
+		"1245":
+		{
+			"artist":"Robert Plamer",
+			"tracks":[]
+		},
+
+		"5439":
+		{
+			"album":"ABBA Gold"
+			
+		}
+	};
+
+	var collectionCopy=JSON.parse(JSON.stringify(collection));
+	function updateCollection(id,property,value)
+	{
+		if(value==="")
+		{
+			delete collection[id] [property];
+		}
+		else if(property==="tracks")
+		{
+			collection[id][property]=collection[id][property] || [];
+			collection[id][property].push=value;
+		}
+		else
+		{
+			collection[id][property]=value;
+		}
+		return collection;
+	}
+
+console.log(updateCollection(5439,"artist","ABBA"));
+console.log(updateCollection(2548,"album",))
+</script>
+
+</body>
+</html>
