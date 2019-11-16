@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>complex object </title>
+</head>
+<body>
+<script type="text/javascript">
+	
+	var stroage=
+	{
+		"car":
+		{
+			"inside":
+			{
+				"glove box": "maps",
+				"passenger seat":"crumbs"
+			},
+			"outside":
+			{
+				"trunk":"jack"
+			}
+		}
+	};
+
+	var contents=stroage.car.inside["glove box"];
+	console.log(contents);
+
+
+	 var plants=
+	 [
+	 {
+	 	type:"flowers",
+	 	list:["rose","tulip","dandelion"]
+	 },
+	 {
+	 	type:tree,
+	 	list:["fir","pine","brich"]
+	 }
+	 ];
+	 var tree=plants[1].list[1];
+	 console.log(tree);
+
+
+</script>
+</body>
+</html>
