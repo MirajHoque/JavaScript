@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Random</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		function randomFraction()
+		{
+			return Math.random();
+		}
+		console.log(randomFraction());
+
+		function randomWholeNum()
+		{
+			return Math.floor(Math.random()*10);
+		}
+		console.log(randomWholeNum());
+
+		//Random number within range
+
+function randomRange(max,min)
+{
+	return Math.floor(Math.random()*(max-min+1))+min;
+}
+console.log(randomRange(5,15));
+
+	</script>
+
+</body>
+</html>
