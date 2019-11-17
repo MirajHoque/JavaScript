@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>var and let</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		var i=5;
+		console.log(i);
+		var i=10;
+		console.log(i);
+
+		//var allows duplicate declaration
+		//used as global scope
+
+		let a=7;
+		console.log(a);
+		//let a=9;
+		//console.log(a);
+		//let never allows duplicate declaration
+		//used as local scope(block scope)
+
+		function checkScope()
+		{
+			"use strict"; // used for catches coding mistake & unsave action
+			let i="Function Scope"
+			if(true) 
+			//true if block run; false else  block run
+			{
+				let i="Block scope";
+			console.log("block scope is: ",i)
+			}
+			console.log("function scope is :",i)
+			return i 
+		}
+		checkScope();
+
+
+	</script>
+
+</body>
+</html>
