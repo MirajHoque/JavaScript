@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>const</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		const S=[5,7,2];
+		//const contain all the feature of let but read only
+		//  can not reassign value
+
+
+		function editInPlace() //mutate of const
+		{
+			"use strict"
+			//S=[2,7,5] never reassign but can update
+			S[0]=2;
+			S[1]=7;
+			S[2]=5;
+
+		}
+		editInPlace();
+		console.log(S);
+
+		
+		//prevent mutation using object.freeze()
+
+function freezeObj()
+{
+	"use strict";
+	const Math_Constants=
+	{
+		PI:3.14
+	};
+	object.freeze(Math_Constants);
+
+try
+{
+	Math_Constants.PI=99;
+}
+catch(ex)
+{
+	console.log(ex);
+}
+return Math_Constants.PI;
+
+}
+const PI=freezeObj();
+console.log(PI);
+
+
+	</script>
+
+</body>
+</html>
