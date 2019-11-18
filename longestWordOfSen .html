@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>longest word of the sentence</title>
+</head>
+<body>
+  <script type="text/javascript">
+
+   var text="hey how is going on?"
+   function LongestWord(sen) { 
+   var arr = sen.split(" "); 
+   //split("space") string into array of substring
+   var longest = "";
+   for(i=0; i<arr.length; i++) {
+       arr[i] = arr[i].replace(/[^0-9a-z]/gi, '');
+       //g for global so check all the match pair
+       //i incasesensitive
+       if(arr[i].length>longest.length) {
+           longest = arr[i];
+       }
+   }
+
+  return longest; 
+         
+}
+console.log(LongestWord(text));
+  </script>
+
+</body>
+</html>
