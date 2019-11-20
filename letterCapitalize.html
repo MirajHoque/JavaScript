@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Letter capitalize</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var text="Zafri is nun"
+     function LetterCapitalize(str) 
+		{ 
+		let words=str.toLowerCase().split(" ");
+		//let wordsOfWords=words.split(" ");
+        for(let i=0;i<words.length;i++)
+        {
+        	words[i]=words[i].split("")[0].toUpperCase()+words[i].substring(1);
+        	//toUpperCase();
+        	 
+        }
+        //x=words.join(); 
+        
+       return words.join(" ");
+
+        }
+   
+
+console.log(LetterCapitalize(text));
+	</script>
+
+</body>
+</html>
