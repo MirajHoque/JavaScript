@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>symbol pattarns</title>
+</head>
+<body>
+	
+	<script type="text/javascript">
+		var s="b";
+		
+		function simpleSymbol(str)
+		{
+			if(str.match(/^[a-z][^+]/gi)) 
+				return false;
+			else if(str.match(/^[+][^a-z]/gi)) 
+				return false;
+			else if(str.match(/^[a-z][+][^a-z]/gi))
+				return false;
+			else if(str.match( /^[+][a-z][^+]/gi))
+				return false;
+			//else if(str.match(/^[a-z]/gi))
+			//	return false;
+				
+			else 
+				return true;
+		}
+		console.log(simpleSymbol(s));
+
+	</script>
+
+</body>
+</html>
