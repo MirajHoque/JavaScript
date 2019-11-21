@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>arrow function</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		//anonymous function(function that has no name)
+		/*
+		var magic=function()
+		{
+			return new Date();
+		};
+		*/
+		//return only one value
+/*
+		var magic=()=>
+		{
+			return new Date();
+		}
+*/
+//if only one value is return it can be written as format value
+
+const magic=()=> new Date(); //no parameter
+
+//multiple parameter
+var concatation=(arr1,arr2)=> arr1.concat(arr2); 
+console.log(concatation([1,2],[1,2,3]));
+
+
+//single parameter
+let isPositive=x=>x>0;
+console.log(isPositive(5));
+
+
+
+
+
+
+	</script>
+
+</body>
+</html>
