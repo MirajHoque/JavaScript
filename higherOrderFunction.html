@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Map,filter</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// filter function
+		let value=[5,6,8,10,15,132];
+		function isEven(num)
+		{
+			return (num%2==0);
+		}
+		values=value.filter(isEven);
+		//filter takes a function as a argument,this function takes elements of array as argument
+		//it return true of false
+		//if true return values
+		console.log(values);
+
+		//using ES6 format
+		//x=>(x%2==0;)
+		newvales=value.filter(x=>x%2==1);
+		console.log(newvales);
+
+//map function(takes a function as argument)
+
+let vals=[4,6,1,2,9];
+function doublesVals(x)
+{
+	return x*2
+}
+values=vals.map(doublesVals);
+console.log(values);
+
+console.log(vals);
+let threeTimesOfVals=vals.map(x=>x*3);
+console.log(threeTimesOfVals);
+
+	</script>
+
+</body>
+</html>
