@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Regular Expression Replacement</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		var s="unicons & rainbows";
+		console.log(s.replace(/unicons/,"cupcakes"));
+
+		var m="unicorns rainbows & cupcakes";
+		console.log(m.replace(/\w{8}/gi,"kittens"))
+
+		//passing function with Regular Expression
+
+		var keyword="There is nothings exits between us";
+		var replaceKeyword=keyword.replace(/[a-z]/gi,replacer);
+		
+		function replacer(match)
+		{
+			/*if(match.length==2)
+			{
+			return match.toUpperCase();
+		}
+			else
+			{
+			return match; 
+		}*/
+		return match.toUpperCase();
+		}
+		console.log(replaceKeyword);
+		
+
+	</script>
+
+</body>
+</html>

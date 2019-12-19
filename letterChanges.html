@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>letter Changes</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		var reality="i have to earn lot of money"
+		function letterChanges(str)
+		 { 
+		 	let changes=str.replace(/[a-z]/gi,function(letter)
+		 	{
+		 	
+		 		if(letter==='z' ||letter==='Z')
+		 			return a;
+		 		
+		 		else
+		 			return String.fromCharCode(letter.charCodeAt(0)+1);
+		 		//fromCharCode-> convert unicode into charecter
+		 		//charCodeAt->convert charecter into unicode
+		 	
+		 	}
+		 	);
+		 	let finalChanges=changes.replace(/[aeiou]/g,function(letter)
+		 	{
+		 		return letter.toUpperCase();
+
+		 	}
+		 	);
+
+
+		 	console.log(finalChanges);
+		 }
+    
+           letterChanges(reality);
+
+	</script>
+
+</body>
+</html>
