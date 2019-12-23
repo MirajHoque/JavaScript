@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>high order arrow function</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		const increment=(function()
+		 //default parameter
+		{
+			return function increment(number,value=1)
+			{
+				return number+value;
+			};
+
+		}
+		) ();
+		console.log(increment(5,2));
+		console.log(increment(5)); 
+
+
+
+	</script>
+
+</body>
+</html>
