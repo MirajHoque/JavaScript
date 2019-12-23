@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Map,filter</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// filter function
+		let value=[5,6,8,10,15,132];
+		function isEven(num)
+		{
+			return (num%2==0);
+		}
+		values=value.filter(isEven);
+		//filter takes a function as a argument,this function takes elements of array as argument
+		//it return subset of elements based on true or false
+		//if true return values
+		console.log(values);
+
+		//using ES6 format
+		//x=>(x%2==0;)
+		newvalues=value.filter(x=>x%2==1);
+		console.log(newvalues);
+
+//map function(takes a function as argument)
+//return a new arrray
+
+let vals=[4,6,1,2,9];
+function doublesVals(x)
+{
+	return x*2
+}
+values=vals.map(doublesVals);
+console.log(values);
+
+console.log(vals);
+let threeTimesOfVals=vals.map(x=>x*3);
+console.log(threeTimesOfVals);
+
+//reduce function
+//reducing whole array into a single 
+
+let randomNumbers=[5,4,1,2,9];
+let sum=0;
+for(let elements of randomNumbers)
+{
+	sum+=elements;
+}
+console.log(sum);
+
+function sumOfRandomNumbers(accumulator,value)
+{
+	return accumulator+value;
+}
+let answer=randomNumbers.reduce(sumOfRandomNumbers,10); 
+//reduce-> array function takes a function as argument which has two two parameter (accumulator,values) go through all elements of array perform necessary operation and reduce it
+
+//10-> starting value of the accumulator
+
+//if accumulator value is not defined by default it is the first elements of the array
+console.log(answer);
+
+let againReduceOperation=randomNumbers.reduce((acc,val)=>acc+val,0);
+console.log(againReduceOperation);
+
+let maxOfRandomNumbers=randomNumbers.reduce((acc,val)=>val>acc?val:acc
+/*
+{
+	
+	if(val>acc)
+	acc=val;
+	return acc;
+}
+*/
+);
+console.log(maxOfRandomNumbers);
+
+
+
+	</script>
+
+</body>
+</html>
