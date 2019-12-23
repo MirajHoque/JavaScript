@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>REST OPERATOR</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//without rest operator
+		 const sum=(function()
+		 {
+		 	return function sum(x,y,z)
+		 	{
+		 		const args=[x,y,z];
+		 		return args.reduce((a,b)=>a+b,0);
+		 		
+
+		 	};
+		 	
+		 	
+		 } 
+		)
+		();
+		 console.log(sum(1,2,3));
+
+		 //with rest operator
+
+		 //rest operator->used for take variable number of argument
+		 //denonted by ...(three dots)
+
+		 const sumWithRestOperator=(function()
+		 {
+		 	return function sumWithRestOperator(...args)
+		 	{
+		 		return args.reduce((acc,val)=>acc+val,0);
+		 	};
+		 }
+
+
+		 	)();
+		 	console.log(sumWithRestOperator(1,2,5,8,7));
+
+
+	</script>
+
+</body>
+</html>
