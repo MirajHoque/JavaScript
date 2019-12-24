@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Destructing Assignment</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var values=
+		{
+			x:5,
+			y:6,
+			z:7
+		};
+		/*
+		//old way
+		var a=values.x;
+		var b=values.y;
+		var c=values.z;
+		*/
+
+		const{x:a,y:b,z:c}=values;
+
+		const avgTemperature=
+		{
+			today:12,
+			tomorrow:13
+		};
+
+		function temOfTomorrow(forecast)
+		{
+			"use strict";
+			const {tomorrow:temperature}=forecast;
+			return temperature;
+
+
+
+		}
+		console.log(temOfTomorrow(avgTemperature));
+
+
+	</script>
+
+</body>
+</html>
