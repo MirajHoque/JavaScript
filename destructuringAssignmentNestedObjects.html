@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Destructuring assignment nested object</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		const localForecast=
+		{
+			today:{min:12,max:13},
+			tomorrow:{min:14,max:15}
+		};
+
+		function maxForecastOfTomorrow(forecast)
+		{
+			"use strict";
+			const {tomorrow:{max:maxOfTomorrow}}=forecast;
+			return maxOfTomorrow;
+		}
+		
+		console.log(maxForecastOfTomorrow(localForecast));
+
+
+
+
+	</script>
+
+</body>
+</html>
