@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>object using template literals</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		/*const person=(name,age,gender)=>
+		{
+		return 
+		{
+			name: name,
+			age: age,
+			gender: gender
+		};
+	};*/
+//console.log(person("Miraj",24,"Male"));
+
+	//can be write as
+
+	const createPerson=(name,id)=>({name,id});
+	
+	console.log(createPerson("Miraj","16-32444-2"));
+	</script>
+
+</body>
+</html>
