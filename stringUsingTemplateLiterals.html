@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Create String using Templete Literals</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//Templete Literals->used for Create complex string
+
+		const person=
+		{
+			name:"Miraj",
+			age:24
+		};
+		const greeting=`Hi,My name is ${person.name}. I am ${person.age} years old.`;
+		console.log(greeting);
+
+		const result=
+		{
+			success:["max-length", "no-amd", "prefer-arrow-function"],
+			failure:["no-var", "var-on-top", "linebreak"],
+			skipped:["id-blacklist","no-dup-keys"]
+		};
+
+		function makelist(arr)
+		{
+			const resultDisplay=[];
+			for(let i=0;i<arr.length;i++)
+			{
+				resultDisplay.push(`<li class="text-warning">${arr[i]}<li>`);
+			}
+			return resultDisplay;
+		}
+console.log(makelist(result.failure));
+
+	</script>
+
+</body>
+</html>
