@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Concise Declarative Function</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//object that contain function
+		const bike=
+		{
+			gear:2,
+			setGear:function(newGear) //setgear is a function
+			{
+				"use strict";
+				this.gear=newGear;
+			}
+		}
+		bike.setGear(3);
+		console.log(bike.gear);
+
+		const someone=
+		{
+			money:"1M",
+			setMoney(newamount)
+			{
+				this.money=newamount;
+			}
+		};
+		someone.setMoney("2M");
+		console.log(someone.money);
+
+
+	</script>
+
+</body>
+</html>
