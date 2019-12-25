@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Setter and Getter</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		function makeClass()
+		{
+		class Thermostat
+		{
+			constructor(temp)
+			{
+				this._temp= 5/9 * (temp-32);
+				//_ make the variable private
+			}
+			get temperature()
+			{
+				return this._temp;
+			}
+			set temperature(updatedTemp)
+			{
+				this._temp=updatedTemp;
+
+			}
+		}
+		return Thermostat;
+	}
+
+	const weather=makeClass();
+	const forecast= new weather(76);
+	//console.log(forecast._temp);
+	let todaytemp=forecast.temperature;
+	forecast.temperature=13;
+	
+	
+	console.log(todaytemp);
+
+
+
+
+
+
+	</script>
+
+</body>
+</html>
