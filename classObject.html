@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Class and Object</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		class SpaceShuttle
+		{
+
+			constructor(targetPlanet)
+			{
+				this.targetPlanet=targetPlanet;
+			}
+		}
+
+		var zeus=new SpaceShuttle("Jupiter");
+		console.log(zeus.targetPlanet);
+
+		function makeClass()
+		{
+			class vegetable
+			{
+				constructor(name)
+				{
+					this.name=name;
+				}
+			}
+			return vegetable;
+		}
+
+		const vegan=makeClass();
+		const vegetableName=new vegan("carrot");
+		console.log(vegetableName.name);
+
+
+
+
+
+	</script>
+
+</body>
+</html>
