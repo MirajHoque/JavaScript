@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title>Promise</title>
+    <script>
+      //let complete=true; //boolean
+      function prom(complete){
+         return p=new Promise((resolve,reject)=>{ //resolve, rejected are methods
+           if(complete){ 
+           //return true for complete
+           resolve("I am successful")
+        }
+         else{
+        reject("I am failed");
+       }
+});
+}
+
+//console.log(prom(true));
+let onfulfillment=(result)=>{
+  console.log(result);
+}
+let onRejection=(error)=>{
+  console.log(error);
+}
+
+prom(true).then(onfulfillment);
+prom(true).catch(onRejection);
+
+    </script>
+  </head>
+  <body>
+    
+  </body>
+</html>
